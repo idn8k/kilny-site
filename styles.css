@@ -115,18 +115,19 @@ p {
 }
 
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  text-decoration: none;
+  display: block;
 }
 
 .brand img {
-  width: 32px;
-  height: 32px;
+  width: auto;
+  height: 36px;
+}
+
+/* The logo file is dark, so turn it white on the dark background. */
+@media (prefers-color-scheme: dark) {
+  .brand img {
+    filter: brightness(0) invert(1);
+  }
 }
 
 .site-nav {
