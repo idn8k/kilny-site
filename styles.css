@@ -73,12 +73,6 @@ img {
   height: auto;
 }
 
-/* The illustrations have a white ground. Multiply drops it out on a coloured card. */
-.hero img,
-.card img {
-  mix-blend-mode: multiply;
-}
-
 a {
   color: inherit;
   text-underline-offset: 3px;
@@ -150,197 +144,37 @@ p {
   color: var(--text);
 }
 
-/* Hero */
+/* Landing: the logo and one line, centred on the My Pieces yellow in both themes. */
 
-.hero {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  gap: 32px;
-  margin-top: 8px;
-  padding: 56px 48px;
+.landing {
   background: var(--my-pieces);
-  color: var(--on-card);
-  border-radius: var(--radius-sheet);
+  color: #000000;
 }
 
-.hero h1 {
-  font-size: clamp(40px, 6vw, 68px);
-}
-
-.hero p {
-  max-width: 30ch;
-  margin-top: 20px;
-  font-size: clamp(18px, 2vw, 22px);
-}
-
-.hero img {
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-}
-
-.badge {
-  display: inline-block;
-  margin-top: 28px;
-  padding: 12px 20px;
-  background: var(--on-card);
-  color: #ffffff;
-  border-radius: var(--radius-pill);
-  font-size: 16px;
-  font-weight: 600;
-}
-
-/* Sections */
-
-section {
-  margin-top: 96px;
-}
-
-.section-head {
-  max-width: 34ch;
-}
-
-.section-head h2 {
-  font-size: clamp(30px, 4vw, 44px);
-}
-
-.section-head p {
-  margin-top: 14px;
-  color: var(--text-secondary);
-}
-
-/* Stages */
-
-.stages {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 8px;
-  margin: 32px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.stages li {
-  padding: 14px 12px;
-  border-radius: var(--radius-card);
-  background: var(--background-subtle);
-  border-top: 6px solid var(--stage);
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.pieces {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.piece {
-  overflow: hidden;
-  background: var(--background-subtle);
-  border-radius: var(--radius-label);
-}
-
-.piece img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-
-.piece-body {
-  padding: 14px 16px 18px;
-}
-
-.piece-name {
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 1.25;
-}
-
-.piece-meta {
-  margin-top: 4px;
-  color: var(--text-secondary);
-  font-size: 14px;
-}
-
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 10px;
-  padding: 4px 10px;
-  background: var(--background);
-  border-radius: var(--radius-pill);
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.chip::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--stage);
-}
-
-/* Feature cards */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 32px;
-}
-
-.card {
+.landing main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 380px;
-  padding: 28px;
-  color: var(--on-card);
-  border-radius: var(--radius-label);
+  align-items: center;
+  justify-content: center;
+  gap: clamp(64px, 10.8vw, 118px);
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 32px var(--gutter);
 }
 
-.card h3 {
-  font-size: 28px;
+.landing h1 {
+  width: clamp(200px, 31vw, 340px);
 }
 
-.card p {
-  margin-top: 10px;
-  font-size: 17px;
+.landing img {
+  width: 100%;
 }
 
-.card img {
-  width: 200px;
-  margin: 24px 0 0 auto;
-}
-
-/* Two-column facts */
-
-.facts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 32px;
-}
-
-.fact {
-  padding: 28px;
-  background: var(--background-subtle);
-  border-radius: var(--radius-label);
-}
-
-.fact h3 {
-  font-size: 22px;
-}
-
-.fact p {
-  margin-top: 10px;
-  color: var(--text-secondary);
-  font-size: 17px;
+.landing p {
+  font-size: clamp(28px, 3.65vw, 40px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
 }
 
 /* Footer */
@@ -400,33 +234,6 @@ section {
 }
 
 @media (max-width: 860px) {
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 40px 24px;
-  }
-
-  .hero img {
-    max-width: 300px;
-  }
-
-  .stages {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .pieces {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cards,
-  .facts {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    min-height: 0;
-  }
-
-  section,
   .site-footer {
     margin-top: 64px;
   }
