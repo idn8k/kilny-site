@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kilny: a studio app for potters</title>
+    <meta
+      name="description"
+      content="Kilny is a pottery studio app for individual makers. Follow each piece from idea to finished, know where it is in the studio, and list it on Etsy when it's done." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="canonical" href="https://kilny.app/" />
+    <meta property="og:title" content="Kilny: a studio app for potters" />
+    <meta
+      property="og:description"
+      content="Follow each piece from idea to finished, know where it is in the studio, and list it on Etsy when it's done." />
+    <meta property="og:url" content="https://kilny.app/" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/assets/instrument-sans.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="wrap site-header">
+      <a class="brand" href="/"><img src="/favicon.svg" alt="" />Kilny</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/support.html">Support</a>
+        <a href="/privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <div class="hero">
+        <div>
+          <h1>Keep track of every piece you make.</h1>
+          <p>
+            Kilny is a studio app for potters. Follow each piece from idea to finished, know which shelf it's on, and
+            list it on Etsy when it's done.
+          </p>
+          <span class="badge">Coming soon to iPhone and Android</span>
+        </div>
+        <img src="/assets/my-pieces.png" width="640" height="640" alt="A jar, a bowl and a plate on a studio table, with a dog asleep underneath" />
+      </div>
+
+      <section>
+        <div class="section-head">
+          <h2>Six stages, from idea to finished</h2>
+          <p>
+            Every piece has a stage. Move it forward when you trim, fire or glaze, and move it back when plans change.
+            Kilny keeps the dates, so each piece carries its own history.
+          </p>
+        </div>
+        <ol class="stages">
+          <li style="--stage: var(--ideas)">Ideas</li>
+          <li style="--stage: var(--formed)">Formed</li>
+          <li style="--stage: var(--trimmed)">Trimmed</li>
+          <li style="--stage: var(--bisqued)">Bisqued</li>
+          <li style="--stage: var(--glazed)">Glazed</li>
+          <li style="--stage: var(--finished)">Finished</li>
+        </ol>
+        <div class="pieces">
+          <article class="piece">
+            <img src="/assets/piece-1.jpg" width="480" height="720" loading="lazy" alt="An unfired grey planter with rows of carved notches" />
+            <div class="piece-body">
+              <p class="piece-name">Carved planter</p>
+              <p class="piece-meta">Damp room</p>
+              <span class="chip" style="--stage: var(--trimmed)">Trimmed</span>
+            </div>
+          </article>
+          <article class="piece">
+            <img src="/assets/piece-4.jpg" width="720" height="480" loading="lazy" alt="A terracotta pot sitting on its saucer" />
+            <div class="piece-body">
+              <p class="piece-name">Terracotta pot</p>
+              <p class="piece-meta">Bisque shelf</p>
+              <span class="chip" style="--stage: var(--bisqued)">Bisqued</span>
+            </div>
+          </article>
+          <article class="piece">
+            <img src="/assets/piece-3.jpg" width="480" height="720" loading="lazy" alt="Five small stoneware bowls stacked on an oval dish" />
+            <div class="piece-body">
+              <p class="piece-name">Tea bowls, set of 5</p>
+              <p class="piece-meta">Glaze table</p>
+              <span class="chip" style="--stage: var(--glazed)">Glazed</span>
+            </div>
+          </article>
+          <article class="piece">
+            <img src="/assets/piece-2.jpg" width="720" height="480" loading="lazy" alt="A small round vase with a speckled turquoise glaze" />
+            <div class="piece-body">
+              <p class="piece-name">Turquoise bud vase</p>
+              <p class="piece-meta">Display shelf</p>
+              <span class="chip" style="--stage: var(--finished)">Finished</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Made for the way a studio runs</h2>
+        </div>
+        <div class="facts">
+          <div class="fact">
+            <h3>Know where it is</h3>
+            <p>
+              Give each piece a location, such as the damp room or the bisque shelf. Add your own locations to match
+              your studio.
+            </p>
+          </div>
+          <div class="fact">
+            <h3>Reminders you set</h3>
+            <p>
+              When a piece changes stage, ask Kilny to remind you to check on it in a few days. Nothing starts a timer
+              unless you do.
+            </p>
+          </div>
+          <div class="fact">
+            <h3>List on Etsy</h3>
+            <p>
+              Connect your Etsy shop and list a finished piece from its own page. When it sells, Kilny marks it sold
+              and moves it to your archive.
+            </p>
+          </div>
+          <div class="fact">
+            <h3>Your pieces stay on your phone</h3>
+            <p>
+              Photos, notes and firing details are stored on your device, and you can start without an account.
+              <a href="/privacy.html">How Kilny handles your data</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Something to read while the kiln cools</h2>
+          <p>Kilny comes with articles about the craft, and many of them can be listened to.</p>
+        </div>
+        <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))">
+          <div class="card" style="background: var(--stories)">
+            <div>
+              <h3>Stories</h3>
+              <p>Discover the people behind the pieces.</p>
+            </div>
+            <img src="/assets/stories.png" width="640" height="640" loading="lazy" alt="A potter in an armchair talking into a small microphone" />
+          </div>
+          <div class="card" style="background: var(--techniques)">
+            <div>
+              <h3>Techniques</h3>
+              <p>Essential tips for every maker.</p>
+            </div>
+            <img src="/assets/technique.png" width="640" height="640" loading="lazy" alt="A potter opening a kiln door" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Free for your first 30 days</h2>
+          <p>
+            Every feature is open during the trial. After it, a subscription keeps adding and editing switched on.
+            Without one, your pieces stay with you to view and search.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap site-footer">
+      <p>
+        © 2026 Kilny. The term "Etsy" is a trademark of Etsy, Inc. This application uses the Etsy API but is not
+        endorsed or certified by Etsy, Inc.
+      </p>
+      <nav aria-label="Footer">
+        <a href="/support.html">Support</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </nav>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,439 @@
+/* Tokens mirror the app's src/constants/theme.ts. */
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/instrument-sans.woff2') format('woff2');
+}
+
+:root {
+  --background: #ffffff;
+  --background-subtle: #f4f3f1;
+  --text: #262626;
+  --text-secondary: #595959;
+  --border: #dddbd5;
+  --action: #6eb24d;
+  --on-card: #262626;
+  --my-pieces: #ffe666;
+  --stories: #66ccff;
+  --techniques: #a8d194;
+  --ideas: #ffd502;
+  --formed: #9f8060;
+  --trimmed: #ff6800;
+  --bisqued: #00aaff;
+  --glazed: #5540bf;
+  --finished: #6eb24d;
+  --radius-card: 8px;
+  --radius-label: 16px;
+  --radius-pill: 24px;
+  --radius-sheet: 32px;
+  --gutter: 16px;
+  --width: 1080px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #262626;
+    --background-subtle: #404040;
+    --text: #ffffff;
+    --text-secondary: #c6c3b9;
+    --border: #595959;
+    --action: #8bc270;
+    --ideas: #ffdd33;
+    --formed: #b29980;
+    --trimmed: #ff8633;
+    --bisqued: #33bbff;
+    --glazed: #7766cc;
+    --finished: #8bc270;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* The illustrations have a white ground. Multiply drops it out on a coloured card. */
+.hero img,
+.card img {
+  mix-blend-mode: multiply;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--bisqued);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+}
+
+.wrap {
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Header */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 32px;
+  height: 32px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 24px;
+  font-size: 16px;
+}
+
+.site-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+/* Hero */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 32px;
+  margin-top: 8px;
+  padding: 56px 48px;
+  background: var(--my-pieces);
+  color: var(--on-card);
+  border-radius: var(--radius-sheet);
+}
+
+.hero h1 {
+  font-size: clamp(40px, 6vw, 68px);
+}
+
+.hero p {
+  max-width: 30ch;
+  margin-top: 20px;
+  font-size: clamp(18px, 2vw, 22px);
+}
+
+.hero img {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 12px 20px;
+  background: var(--on-card);
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Sections */
+
+section {
+  margin-top: 96px;
+}
+
+.section-head {
+  max-width: 34ch;
+}
+
+.section-head h2 {
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+.section-head p {
+  margin-top: 14px;
+  color: var(--text-secondary);
+}
+
+/* Stages */
+
+.stages {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stages li {
+  padding: 14px 12px;
+  border-radius: var(--radius-card);
+  background: var(--background-subtle);
+  border-top: 6px solid var(--stage);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.pieces {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.piece {
+  overflow: hidden;
+  background: var(--background-subtle);
+  border-radius: var(--radius-label);
+}
+
+.piece img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.piece-body {
+  padding: 14px 16px 18px;
+}
+
+.piece-name {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.piece-meta {
+  margin-top: 4px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 4px 10px;
+  background: var(--background);
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.chip::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--stage);
+}
+
+/* Feature cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+  padding: 28px;
+  color: var(--on-card);
+  border-radius: var(--radius-label);
+}
+
+.card h3 {
+  font-size: 28px;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.card img {
+  width: 200px;
+  margin: 24px 0 0 auto;
+}
+
+/* Two-column facts */
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.fact {
+  padding: 28px;
+  background: var(--background-subtle);
+  border-radius: var(--radius-label);
+}
+
+.fact h3 {
+  font-size: 22px;
+}
+
+.fact p {
+  margin-top: 10px;
+  color: var(--text-secondary);
+  font-size: 17px;
+}
+
+/* Footer */
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 96px;
+  padding-top: 28px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Text pages: privacy, terms, support */
+
+.prose {
+  max-width: 68ch;
+  margin-top: 48px;
+}
+
+.prose h1 {
+  font-size: clamp(36px, 5vw, 52px);
+}
+
+.prose .updated {
+  margin-top: 12px;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.prose h2 {
+  margin-top: 44px;
+  font-size: 24px;
+}
+
+.prose p,
+.prose ul {
+  margin-top: 14px;
+}
+
+.prose ul {
+  padding-left: 22px;
+}
+
+.prose li + li {
+  margin-top: 6px;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+
+  .hero img {
+    max-width: 300px;
+  }
+
+  .stages {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pieces {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards,
+  .facts {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 0;
+  }
+
+  section,
+  .site-footer {
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-nav {
+    gap: 16px;
+  }
+}
