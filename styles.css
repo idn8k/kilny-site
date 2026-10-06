@@ -1,4 +1,4 @@
-/* Tokens mirror the app's src/constants/theme.ts. */
+/* One theme: black text on the app's My Pieces yellow. */
 @font-face {
   font-family: 'Instrument Sans';
   font-style: normal;
@@ -8,45 +8,10 @@
 }
 
 :root {
-  --background: #ffffff;
-  --background-subtle: #f4f3f1;
-  --text: #262626;
-  --text-secondary: #595959;
-  --border: #dddbd5;
-  --action: #6eb24d;
-  --on-card: #262626;
-  --my-pieces: #ffe666;
-  --stories: #66ccff;
-  --techniques: #a8d194;
-  --ideas: #ffd502;
-  --formed: #9f8060;
-  --trimmed: #ff6800;
-  --bisqued: #00aaff;
-  --glazed: #5540bf;
-  --finished: #6eb24d;
-  --radius-card: 8px;
-  --radius-label: 16px;
-  --radius-pill: 24px;
-  --radius-sheet: 32px;
+  --background: #ffe666;
+  --text: #000000;
   --gutter: 16px;
   --width: 1080px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #262626;
-    --background-subtle: #404040;
-    --text: #ffffff;
-    --text-secondary: #c6c3b9;
-    --border: #595959;
-    --action: #8bc270;
-    --ideas: #ffdd33;
-    --formed: #b29980;
-    --trimmed: #ff8633;
-    --bisqued: #33bbff;
-    --glazed: #7766cc;
-    --finished: #8bc270;
-  }
 }
 
 * {
@@ -79,7 +44,7 @@ a {
 }
 
 a:focus-visible {
-  outline: 3px solid var(--bisqued);
+  outline: 3px solid var(--text);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -123,13 +88,6 @@ p {
   height: 36px;
 }
 
-/* The logo file is dark, so turn it white on the dark background. */
-@media (prefers-color-scheme: dark) {
-  .brand img {
-    filter: brightness(0) invert(1);
-  }
-}
-
 .site-nav {
   display: flex;
   gap: 24px;
@@ -137,20 +95,15 @@ p {
 }
 
 .site-nav a {
-  color: var(--text-secondary);
+  color: var(--text);
   text-decoration: none;
 }
 
 .site-nav a:hover {
-  color: var(--text);
+  text-decoration: underline;
 }
 
-/* Landing: the logo and one line, centred on the My Pieces yellow in both themes. */
-
-.landing {
-  background: var(--my-pieces);
-  color: #000000;
-}
+/* Landing: the logo, centred. */
 
 .landing main {
   display: flex;
@@ -188,8 +141,8 @@ p {
   margin-top: 96px;
   padding-top: 28px;
   padding-bottom: 40px;
-  border-top: 1px solid var(--border);
-  color: var(--text-secondary);
+  border-top: 1px solid var(--text);
+  color: var(--text);
   font-size: 15px;
 }
 
@@ -212,7 +165,7 @@ p {
 
 .prose .updated {
   margin-top: 12px;
-  color: var(--text-secondary);
+  color: var(--text);
   font-size: 15px;
 }
 
